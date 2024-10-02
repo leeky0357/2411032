@@ -7,7 +7,7 @@ int main(int argc, char *argv[]) {
 	int a,b;
 	
 	printf("Input two integers: ");
-	scanf("%i,%i",&a,&b);
+	scanf("%i %i",&a,&b);
 	
 	printf("+ result is %i\n", a+b);
 	printf("- result is %i\n", a-b);
