@@ -25,7 +25,7 @@ int main(void) {
 		int a;
 		printf("Enter the value: ");
 		scanf("%i",&a);
-;
+
 		return a;
 	}
 	
