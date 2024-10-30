@@ -1,15 +1,15 @@
-# Project: 1030-3
+# Project: 1030-5.1
 # Makefile created by Embarcadero Dev-C++ 6.3
 
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = practice3.o
-LINKOBJ  = practice3.o
+OBJ      = "practice5-1\ main.o" "practice5-1\ sub.o"
+LINKOBJ  = "practice5-1 main.o" "practice5-1 sub.o"
 LIBS     = -L"C:/Users/gangy/Downloads/Dev-Cpp/TDM-GCC-64/lib" -L"C:/Users/gangy/Downloads/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Users/gangy/Downloads/Dev-Cpp/TDM-GCC-64/include" -I"C:/Users/gangy/Downloads/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Users/gangy/Downloads/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
 CXXINCS  = -I"C:/Users/gangy/Downloads/Dev-Cpp/TDM-GCC-64/include" -I"C:/Users/gangy/Downloads/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Users/gangy/Downloads/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Users/gangy/Downloads/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
-BIN      = 1030-3.exe
+BIN      = 1030-5.1.exe
 CXXFLAGS = $(CXXINCS) 
 CFLAGS   = $(INCS) 
 DEL      = C:\Users\gangy\Downloads\Dev-Cpp\DevCpp.exe INTERNAL_DEL
@@ -24,5 +24,8 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-practice3.o: practice3.c
-	$(CC) -c practice3.c -o practice3.o $(CFLAGS)
+"practice5-1\ main.o": practice5-1\ main.c
+	$(CC) -c "practice5-1 main.c" -o "practice5-1 main.o" $(CFLAGS)
+
+"practice5-1\ sub.o": practice5-1\ sub.c
+	$(CC) -c "practice5-1 sub.c" -o "practice5-1 sub.o" $(CFLAGS)

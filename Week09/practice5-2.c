@@ -3,22 +3,13 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-static int sum=1;
+static int all_files;
+
+extern void sub();
+
 int main(void)
 {
-	int sum=0;
-	
-	printf("sum = %d\n", sum);
-	
+	sub();
+	printf("%d\n", all_files);
 	return 0;
- } 
- 
- extern int sum;
- 
- int sum1(void)
- {
- 	sum = sum + 1;
- }
- 
-
-
+}
