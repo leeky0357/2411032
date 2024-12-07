@@ -251,13 +251,15 @@ int getWinner(void)
 }
     //step 3. game end process
     printf("GAME END!!\n");
-   	printf("%i players are alive! winner is %s\n", getAlivePlayer(), player_name[getWinner()]);
    	int winner = getWinner();
    	
-	    if (winner != -1)
-        	printf("The winner is %s (%d coins)!\n", player_name[winner], player_coin[winner]);
-    	else
-        	printf("No winner as all players were died!\n");
+   	if (getAlivePlayer() ==0)
+    {
+			printf("No winner! All players were died.\n");
+    }
+	else if (winner != -1)
+       	printf("%i players are alive! The winner is %s (%d coins)!\n", getAlivePlayer(), player_name[winner], player_coin[winner]);
+        	
 // ----- EX. 6 : game end ------------
 int game_end(void)
 {
